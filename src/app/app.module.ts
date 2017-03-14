@@ -15,6 +15,7 @@ import {ValidateService} from './services/validate.service';
 import {AuthService} from './services/auth.service';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { CompanyComponent } from './company/company.component';
+import { TaskComponent } from './task/task.component';
 import { CreatcompanyComponent } from './creatcompany/creatcompany.component';
 
 @NgModule({
@@ -38,13 +39,14 @@ import { CreatcompanyComponent } from './creatcompany/creatcompany.component';
   {path: 'creatcompany',   component: CreatcompanyComponent},
   {path: 'signin',component: SigninComponent},
   {path: 'aboutus',   component: AboutusComponent},
-  {path: 'company',   component: CompanyComponent}
+  {path: 'company',   component: CompanyComponent},
+  {path: 'task',   component: TaskComponent}
   ]),
     FlashMessagesModule
   ],
   providers: [ValidateService,AuthService],
   bootstrap: [AppComponent]
-})
+  })
 
 
 
