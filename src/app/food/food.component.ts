@@ -71,7 +71,7 @@ export class FoodComponent implements OnInit {
     console.log(voteObj)
     this.foodservice.addvote(voteObj).subscribe(data =>{
       if(data){
-        this.flashMessage.show('you vote m***F***', {cssClass: 'alert-success', timeout: 3000});
+        this.flashMessage.show('you vote well', {cssClass: 'alert-success', timeout: 3000});
         this.foodservice.getFood(localStorage.getItem("user-id")).subscribe(data => {
           this.foods = data;
           console.log(this.foods)

@@ -66,8 +66,8 @@ app.get('/api/gaming')
 
 
 
-app.listen(process.env.PORT || 3300);
-console.log('Running on port 3300...');
+app.listen(process.env.PORT || 3000);
+console.log('Running on port 3000...');
 
 //////cccccc 
 // http.listen(process.env.PORT || 8000, () => {

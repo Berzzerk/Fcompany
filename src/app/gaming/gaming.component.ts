@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class GamingComponent implements OnInit {
   game = false;
   show = false;
+  baerd = false;
 
   constructor(
     private flashMessage:FlashMessagesService,
@@ -23,13 +24,19 @@ export class GamingComponent implements OnInit {
 
   div_hide(){
     document.getElementById('aya').style.display = "none";
-    this.game = !this.game
   }
 
  //Function To Display Popup
   div_show() {
-  	document.getElementById('back').style.display = "block";
+    document.getElementById('back').style.display = "block";
     document.getElementById('aya').style.display = "block";
     this.show = true;
   }
+
+  hide_all(){
+    this.game = false;
+    this.show = false;
+    this.baerd = false
+  }
+
 }
