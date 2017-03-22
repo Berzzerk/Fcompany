@@ -1,4 +1,4 @@
-var express = require('express');
+ express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
@@ -15,7 +15,7 @@ var FoodController = require('./food/foodController.js');
 app.use(express.static(__dirname + '/../dist'));
 app.use(bodyParser.json());
 
-/////cc
+/////ccccccccccccccc
 let http = require('http').Server(app);
 let io = require('socket.io')(http);
 io.on('connection', (socket) => {
@@ -62,16 +62,15 @@ app.post('/api/food/vote', FoodController.handlefood.vote);
 app.get('/api/food/:userId', FoodController.handlefood.getfood);
 app.delete('/api/food/delete',FoodController.handlefood.delete);
 
-app.get('/api/gaming')
 
 
 
-app.listen(process.env.PORT || 3300);
-console.log('Running on port 3300...');
+// app.listen(process.env.PORT || 8000);
+// console.log('Running on port 8000...');
 
-//////cccccc 
-// http.listen(process.env.PORT || 8000, () => {
-//   console.log('started on port 8000');
-// });
+//////cccccc
+http.listen(3300, () => {
+  console.log('started on port 3300');
+});
 
 module.exports = app;
